@@ -1,0 +1,48 @@
+Source: rtkbt
+Maintainer: "Radxa Computer Co., Ltd" <dev@radxa.com>
+Section: misc
+Priority: optional
+Standards-Version: 4.6.0
+Build-Depends: debhelper (>=12~),
+               devscripts,
+               dh-sequence-dkms,
+               lintian,
+
+Package: rtkbt-dkms
+Architecture: all
+Section: misc
+Priority: optional
+Depends: rtk-btusb-dkms,
+         btrtksdio-dkms,
+         hci-uart-dkms,
+         ${misc:Depends},
+Description: Metapackage for Realtek Bluetooth driver
+ This package installs all currently supported Realtek
+ Bluetooth drivers.
+
+Package: rtk-btusb-dkms
+Architecture: all
+Section: misc
+Priority: optional
+Depends: ${misc:Depends},
+Description: dkms source for Realtek USB Bluetooth driver
+ This package provides the dkms source code for Realtek
+ USB Bluetooth driver.
+
+Package: btrtksdio-dkms
+Architecture: all
+Section: misc
+Priority: optional
+Depends: ${misc:Depends},
+Description: dkms source for Realtek SDIO Bluetooth driver
+ This package provides the dkms source code for Realtek
+ SDIO Bluetooth driver.
+
+Package: hci-uart-dkms
+Architecture: all
+Section: misc
+Priority: optional
+Depends: ${misc:Depends},
+Description: dkms source for Realtek UART Bluetooth driver
+ This package provides the dkms source code for Realtek
+ UART Bluetooth driver.

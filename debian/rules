@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/pkg-info.mk
+include /usr/share/dpkg/architecture.mk
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_install -prtk-btusb-dkms src/usb/bluetooth_usb_driver/* usr/src/rtk_btusb-$(DEB_VERSION)/
+	dh_install -pbtrtksdio-dkms src/sdio/bluetooth_sdio_driver/* usr/src/btrtksdio-$(DEB_VERSION)/
+	dh_install -phci-uart-dkms src/uart/bluetooth_uart_driver/* usr/src/hci_uart-$(DEB_VERSION)/
+
+override_dh_dkms:
+	dh_dkms -V $(DEB_VERSION)
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz
