@@ -1,3 +1,9 @@
+rtkbt (20220330.0.1) stable; urgency=medium
+
+  * Fix changelog
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Tue, 11 Apr 2023 11:04:10 +0800
+
 rtkbt (20220330.0.0) stable; urgency=medium
 
   * Initial release
