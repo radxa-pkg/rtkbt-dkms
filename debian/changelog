@@ -1,3 +1,9 @@
+rtkbt (20220330-1) stable; urgency=medium
+
+  * Change source format
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Sun, 23 Apr 2023 15:21:21 +0800
+
 rtkbt (20220330.0.2) stable; urgency=medium
 
   * Add PID 0xb008 for RTL8723BE
